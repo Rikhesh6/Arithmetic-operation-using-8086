@@ -37,15 +37,14 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 CODE SEGMENT
 ASSUME CS: CODE, DS: CODE
 ORG 1000H
-MOV SI,2000H
+MOV SI,1200H
 MOV CL,00H
 MOV AX,[SI]
 MOV BX,[SI+02H]
 ADD AX,BX
 JNC L1
 INC CL
-L1:
-MOV [SI+04H],AX
+L1:MOV [SI+04H],AX
 MOV [SI+06H],CL
 MOV AH,4CH
 INT 21H
@@ -57,8 +56,10 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-|                         |                          |
-
+| 1200=12|1204=24|
+| 1201=34                     
+| 1202=12|1205=68|
+| 1203=34| 
 #### Manual Calculations
 
 (Add your calculation here)
@@ -66,6 +67,7 @@ END
 ---
 
 ## OUTPUT IMAGE FROM MASM SOFTWARE
+<img width="626" height="389" alt="image" src="https://github.com/user-attachments/assets/66a26b7f-e3ea-4c6a-b2aa-2555d0cb8c1d" />
 
 ## 2. SUBTRACTION
 
@@ -90,8 +92,10 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-|                         |                          |
-
+| 2000=24|   2004=12                       |
+|2001=68|
+|2002=12|2005=34|
+|2003=34|
 #### Manual Calculations
 
 (Add your calculation here)
@@ -100,6 +104,7 @@ END
 
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="622" height="394" alt="image" src="https://github.com/user-attachments/assets/a0d634ab-79c3-4995-8b02-445bc6e9806b" />
 
 ## 3. MULTIPLICATION
 
@@ -139,7 +144,10 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-|                         |                          |
+ 2000=12|   2004=44                      |
+|2001=34|2005=51|
+|2002=12|2006=97|
+|2003=34|  2007=0A                        |
 
 #### Manual Calculations
 
@@ -148,6 +156,7 @@ END
 ---
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="640" height="398" alt="image" src="https://github.com/user-attachments/assets/fdc5ff8c-6020-40ce-971a-b92bb27bb871" />
 
 ## 4. DIVISION
 
@@ -184,7 +193,11 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-|                         |                          |
+| ----------------------- | ------------------------ |
+ 2000=24|   2004=02                     |
+|2001=68|2005=00|
+|2002=12|2006=00|
+|2003=34|  2007=00                    |
 
 #### Manual Calculations
 
@@ -192,6 +205,7 @@ END
 
 ---
 ## OUTPUT FROM MASM SOFTWARE
+<img width="627" height="399" alt="image" src="https://github.com/user-attachments/assets/35753395-48f2-4b80-bd96-c3d0f2556fdc" />
 
 
 
